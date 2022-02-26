@@ -1,15 +1,17 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <APIpart info="sss"/>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-
+import APIpart from './components/APIpart.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    APIpart
   }
 }
 </script>
