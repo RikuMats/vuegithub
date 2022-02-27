@@ -21,14 +21,18 @@ export default {
           msg:null
       }
   },
-  mounted: function(){
-      axios.get('https://api.ipify.org/',
+  created: function(){
+      axios.get('http://localhost:5000/',
       {
         params:{
-          format:'json'
+          fruit:'apple',
+          animal:'giraffe'
         }
       })
-      .then(response => (this.msg= response))
+      .then(response => (this.msg= response["data"]))
+      .catch(error => console.log(error))
+      console.log(this.msg)
+
   }
 }
 </script>
